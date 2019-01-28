@@ -1,37 +1,1160 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/OriginalGamingAU/github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Original Gaming Australia</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js" type="text/javascript">
+    </script>
+    <link href="" rel="shortcut icon" />
+    <style type="text/css">
+        /*<![CDATA[*/
+        
+        * {
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            background-attachment: fixed;
+            background-image: url();
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            color: #000000;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 300;
+        }
+	    
+	.linkblack {
+  	text-decoration: none;
+ 	color: black;
+	}
 
-### Markdown
+	p {
+  	font-family: 'Raleway', sans-serif;
+	}
+        
+        h1 {
+            font-weight: 300;
+            text-align: center;
+        }
+        
+        h2 {
+            font-weight: 500;
+		font-family: 'Raleway', sans-serif;
+        }
+        
+        h3 {
+            background-color: #2C3539;
+            color: #ffffff;
+            font-weight: 500;
+            margin-top: 20px;
+            padding: 15px;
+        }
+        
+        h3.red {
+            background-color: #4F5759;
+        }
+        
+        h3 img {
+            float: right;
+        }
+        
+        h3:hover {
+            cursor: hand;
+            cursor: pointer;
+        }
+        
+        #h3:red {
+            cursor: hand;
+            cursor: pointer;
+        }
+        
+        h4 {
+            font-weight: 500;
+            margin-top: 20px;
+        }
+        
+        h5 {
+            font-size: 10px;
+            text-align: center;
+        }
+        
+        .container {
+            background-color: #ffffff;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+            width: 80%
+        }
+        
+        .dropdown {
+            background-color: #fffff;
+            display: none;
+            font-size: 16px;
+            line-height: 22px;
+            padding-top: 15px;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-bottom: 15px;
+        }
+        
+        .dropdown li {
+            list-style-type: circle;
+            margin-top: 5px;
+        }
+        
+        .dropdown li ul {
+            padding-left: 50px;
+        }
+        
+        .dropdown li ul li {
+            list-style-type: square;
+        }
+        
+        .dropdown ul.tips li {
+            font-style: italic;
+            list-style-image: url(data:image/png;base64,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);
+        }
+        
+        .footer {
+            color: #ffffff;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+        
+        .header {
+            color: #ffffff;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+        
+        .recentchanges {
+            background-color: #535860;
+            color: #ffffff;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            padding: 10px;
+            width: 80%;
+        }
+        
+        #expandall {
+            background-color: transparent;
+            color: #ffffff;
+            padding: 5px 10px;
+            position: fixed;
+            right: 1px;
+            top: 1px;
+        }
+        
+        #expandall:hover {
+            cursor: hand;
+            cursor: pointer;
+        }
+        /*]]>
+    </style>
+</head>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<body>
+    <div id="expandall"><img alt="Expand all button" class="icon icons8-Expand" height="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACHElEQVRIie2VsWsUYRTE5x3LEVKIHOkkIUgQCwliIWIZrFKIoKWVhURIKRjEViwEU1nmP7ARqxSWVlFEiBqIglEkBNHjXBMl8eZnke9ws9nbu9LCqb6FeTPfvP14L4BlSWclNSRZ0m9J34GPEfEkIh6oBsCcpMuSJiWNScqShiWtZUn8aKluLCImgdU68WRwLCJm0gXLmBaQk2CbApaAkSEMmsAiFbCdN1IcAcUiSXotaXeQgaRd4FWvHjigJWCryh3YBi4eIFcnOA+0+2jkAtZ77Sm1iGR+pkZ8Algv1pbOX2T7qe1u6vk80CmRNoDyIxCQ2X7W4yb+T2ABWLTdtb2SRcRjSauSbkn6JWlN0lJETEhSRLQkNSsCNCLiROH7m6Qbkh5JyiJiR9J2ZXTbU7ZfsP/CrvZrke1LQNv2Z9vnbPejHgYwAhwZgtcCWsMr/8c/A2B0mJ9sewSoesa1RSdtv7XdBq7UXGIW2LL9EpjqJ3YduAc0bQuYAT4VxkW7KklKWJxjG7YvJI3M9h3bNwUsA13bD4FrQKc4jFKS0SoD2+8LPIDc9jxwF9izvVI57ArzZRM4VdOiaWCzdtgxYFwP8b9mbed9NHIBX0sxe1gAqtZgOUXD9lyxtnDOG0q7lMMbbVz7C3wQGhExXqr9ey4mKKEL3B+iRbeBvX4tyiS9kXS65xgRkrQj6QPQGWQQET8kPQeOR8RoSefdH0aUSn204+xNAAAAAElFTkSuQmCC" width="24" /></div>
+    
+    <div class="header">
+	
+	
+	
+        <h1><b>Monumental Gaming | DarkRP</b></h1>
+		
+		
+    </div>
+    <div>
+        <div class="container">
+		
+		
+            <h2>Welcome to Original Gaming Australia!</h2><br>
+			
+            <p>These rules listed here must be followed at all times to ensure our players enjoy their exerpience.<br/>
+			Please take time to read the rules listed below and if you are in need of any assistance please contact staff either through ingame admin chat "@ help Throbbin Hood is calling me fat!" or the discord; "https://discord.gg/tCE2VNW".<br/>
+			</i><br/>
+			</p>
+			
 
-```markdown
-Syntax highlighted code block
+			
+            <h3>1. Basic Rules</h3>
+            <div class="dropdown">
+                <ul>
+                    <li><b>You will be permanently banned (without warning) for:</b>
+						<ul>
+							<li>Prop spam. This is strictly off limits.</li>
+							<li>Doxing players. Doxing means to release another players personal information without their permission.</li>
+							<li>DDOS and DDOS threats are not taken lightly.</li>
+							<li>Using game exploits intentionally.</li>
+							<li>Money exploits or spawning money. Any accomplice to this will be banned aswell.</li>
+							<li>Cheating, macros, hacks etc.</li>
+						</ul><br></li>
+						
+					<li>Do not advertise other servers.</li>
+                    <li>Bullying and racism is not permitted.</li>
+					<li>Do not prop abuse. (Prop climb, prop push, etc).</li>
+					<li>You must attempt to keep all props frozen at all times to ensure good performance.</li>
+                    <li>Do not rope spam.</li>
+                    <li>Mic spam and sound emitter abuse are not allowed.</li>
+                    <li>When casting a demotion, discuss why in <em>/OOC</em> first and give time for the person being demoted to respond.</li>
+                        <ul>
+							<li>Do not start a vote if objections are raised.</li>
+							<li>This can only be used for job abuses directly related to RP.</li>
+							<li>Eg: <em>/OOC Demotion of Jeremy Salsa for FailRP and NLR any objections?</em></li>
+                        </ul>
+					<li>Do not attempt to find loopholes in the rules.</li>
+					<li>Staff decisions are final. If you have a problem with a staff members decision please go to our discord (link at top of page).</li>
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+            </div>
+            <h3>2. Roleplay Basics</h3>
+            <div class="dropdown">
+                <ul>
+				
+			<b>Basic RP Rules:</b>
+                    <li>Do not RDM under any circumstances. You must have a valid reason to kill such as self defence, trespassing or </li>
+					<li>Follow your job rules.</li>
+                    <li>Do not self supply. This means you cannot change to a shop class, spawn shipments and change back to your previous job straight after.</li>
+                    <li>Do not metagame. This means you must pretend you don't know a hitman is a hitman.
+						<ul>
+							<li>Your gang is seen as a gang while you are breaking the law. This means that if your blood leader kills someone, the police can arrest a normal blood aswell.</li>
+						</ul>
+					<li>You are ALWAYS in character. You cannot be an OOC job.</li>
+					<li>Use the <em>/OOC</em> properly. It is the only time you can speak out of character. Do not taunt in OOC.</li>
+					<li>Use <em>/cr</em> to report crimes to the police.</li>
+                    <li>Government jobs are only allowed to own a printer if it's in a bank.(Banker job).
+						<ul>
+							<li>This is considered corrupt and the banker could get you arrested, or you could pay a bit extra ;) </li>
+						</ul><br>
+			<b>Weapons and Combat:</b>
+                    <li>You must mark a KOS area clearly. Otherwise a clear verbal/chat warning must be given before the player is killed. </li>
+					<li>You can be instantly cuffed/searched/weapons confiscated/arrested if you are seen by the Government carrying any firearm in public.</li>
+                    <li>One handed and melee weapons are legal by default. You can carry (but not wield) them in public.
+					<li>Two handed weapons are illegal by default (you cannot carry them at all) unless otherwise stated on the law board.
+						<ul>
+							<li>A Gun License allows you to legally carry (but not wield) 2 handed weapons in public.</li>
+							<li>A Gun License allows you to legally wield 2 handed weapons within your establishment.</li>
+						</ul>
+					<li>Do not put innocent lives at risk (bait cops by walking around with a gun out for no reason) nor act as a meat shield for others.</li>
+					<li>Try to minimise bunny hopping during combat.</li><br>
+                    
+			<b>Stealing:</b>
+                    <li>You are only allowed to mug for $1000 or less. Do not repetitively mug a player.</li>
+					<li>You MUST advertise muggings. Example: "/advert (MUG) Give me $1000 or I'll kill you!"</li>
+                    <li>You cannot steal items which are crucial for someones job, they may be destroyed however.
+						<ul>
+							<li>These items include meth cookware, cocaine barrels etc.</li>
+						</ul>
+                    <li>Stealing during an RP transaction is not allowed, regardless of the job you are playing as.
+						<ul>
+							<li>This includes stealing ammo or other items as someone spawns them.</li>
+						</ul></li>
+                    <li>For any transaction involving currency, the seller must provide said goods or a refund.</li><br>
+							
+			<b>AFK and Suicide:</b>					
+					<li>Do not AFK for long periods of time as any job other than Citizen or Hobo.</li>
+					<li>You are not immune to RP when you are AFK. (You can be pick pocketed, raided, etc.)</li>
+					<li>No AFK boxes. (Blocking yourself in so you can't be raided).</li>
+					<li>Do not suicide or change job to avoid RP situations.
+						<ul>
+							<li>We don't care if you suicide with friends for laughs, we're not that serious, just don't break any roleplay.</li>
+						</ul>
+                </ul>
+            </div>
+			
+            <h3>3. Roleplay Rules</h3>
+            <div class="dropdown">
+			<b>New Life Rule (NLR):</b>
+                    <li>If you die in public, you must not return to your point of death for 5 minutes.</li>
+					<li>If you die on your property, you may only return early if there is no raid or RP situation ongoing.
+						<ul>
+							<li>You must wait for any raids to complete before returning.</li>
+						</ul>
+                    <li>When you die, you forget all details about your past life. You remember nothing, apart from needing to avoid your area of death.
+						<ul>
+							<li>You are not allowed to rejoin combat or regain memory just because someone from your old life mentions the same issue in your new life.</li>
+						</ul>
+					<li>A police officer cannot arrest a person that killed them, however if someone is wanted by the police, the officer may attempt to arrest them.
+						<ul>
+							<li>This goes to say the police officer who died cannot run directly towards the previous death, but may perhaps find the wanted person nearby. Play fairly.</li>
+						</ul>
+                    <br>		
+					
+			<b>FearRP:</b>
+                    <li>You must value your roleplay life. If someone has a gun to your head you must follow their orders.</li>
+					<li>When under FearRP, you may not draw a weapon on your attacker unless they turn away first.</li>
+                    <li>Requests to the victim (demands) must be reasonable. Remember you must advertise the mug before you attempt to take their money.
+						<ul>
+							<li>You may order the victim to let you inside of their base.</li>
+						</ul></li>
+					<li>Your gun must be pointed at the victim for FearRP to apply. Crowd control can be hard for one person.
+						<ul>
+							<li>If you turn around or stop threatening the victim at any point it will not be considered FailRP if he draws a gun and kills you.</li>
+						</ul></li>
+					<br>
+					
+			<b>Raiding:</b>
+					<li>NO RDM: Do not kill innocent bystanders unless they pose a direct threat to your raid or have been warned clearly to move away.</li>
+					<li>You must /advert Raid. If you are raiding with a buddy you must advert with their name in the advert.
+						<ul>
+							<li>Broad adverts (<em>/ooc mug|raid|thief|counterraid|kidnap|hit</em>) are not allowed. Adverts must be clear and specific.
+							<li>It is Metagaming if people respond to your advert in-character. Eg: Arrest you prior to any actual raid, or run away, etc.
+						</ul>
+					<li>You must wait 5-10 seconds after advertising to commence your raid. You cannot kill any targets during this time either.</li>
+					<li>If you realise during the raid that the base is already being raided, you must leave instantly and <em>/ooc Raid Cancelled/Over</em></li>
+					<li>Police are only considered a direct threat to the raid only if they are directly and knowingly observing it. (Weapons drawn etc)</li>
+                    <li>You may not heal yourself (armors and health packs) during a raid.</li>
+                    <li>If you die during a raid you cannot come back afterwards and keep helping with the raid.</li>
+                    <li>You cannot steal items which are crucial for someone job, they may be destroyed however.
+						<ul>
+							<li>These items meth cookware, cocaine barrel etc.</li>
+						</ul>
+					<li>You must /advert Raid Over when you have completed your raid and exited the building.</li>
+                    <li>A group may only raid the same base 15 minutes after their previous raid was finished.
+                    <li>Raids can only last up to 10 minutes. Once a raid has reached this time limit, it is over and the raider must leave.
+						<ul>
+							<li>Do not shoot raiders who are leaving because of the 10 minute time limit.</li>
+							<li>Raiders cannot intentionally stall by calling raid then randomly roaming the streets for several minutes.</li>
+							<li>Raiders cannot intentionally stall if they have finished the raid. Leave and call it over.</li>
+						</ul>
+					<li>Hitmen allowed to raid but only to kill their target. They are not allowed to steal.</li><br>
+			
+			<b>Declaring War:</b>
+					<li>Both gangs can wage war between each other. The gangs can also wage war (one at a time) against the Government.</li>
+                    <li>No gangs are at war by default. To start a war the gang leader must "/advert War against _____. Do you accept?"</li>
+                    <li>Gangs must have 2 members (including the leader) to commence a war.</li>
+					<li>If the opposing leader declines or doesn't reply you cannot commence a war.</li>
+                    <li>The Government cannot initiate a war, but the Mayor (or Police Chief if no Mayor) can accept a war declaration.</li>
+                    <li>The war is over when all members of a gang/group are killed once each.
+						<ul>
+							<li>Once you have died during a war, you must attempt to avoid all conflict.</li>
+						</ul></li>
+                    <li>You must /advert War over once all members have been killed.</li>
+					<li>You cannot gang up in wars. Eg: Blood and Crip vs the Government.</li>
+                    <li>Each group has their own 10 minute 'war cooldown' where they must wait before they can participate again.</li><br>
+					
+			<b>Kidnapping:</b>
+					<li>Only two thieves working together or a gang with two members (including the leader) may kidnap.</li>
+					<li>Kidnappings can only last up to 10 minutes.</li>
+                    <li>You may not kidnap citizens or jobs that work alone. (Hitmen, lone security guards, meth cooks etc.)</li>
+					<li>The maximum you can ransom someone for is $10,000.</li>
+					<li>The police must value the life of the victim and either mount a raid operation or pay the ransom.</li>
+					<li>If no one pays the ransom you may kill or release the victim.</li>
+                    <li>You must /advert Kidnap before commencing a kidnapping and also /advert Kidnap over after it has been completed.
+						<ul>
+							<li>Once you advert a kidnap you are required to wait 10 seconds before commencing, just like raiding.</li>
+						</ul></li>
+                    <li>Don't forget to follow FearRP when being kidnapped.</li>
+        </div>
 
-1. Numbered
-2. List
+		
+            <h3>4. Base Building Guidelines</h3>
+            <div class="dropdown">
+			
+			<b>General Base Rules:</b>
+					<li>You cannot block key routes or build on roads or footpaths. This includes making toll booths for either roads or tunnels.</li>
+                    <li>You cannot enclose public resources or NPC's within personal property. Eg: Vending Machines/Drug Dealers.</li>
+					<li>You may only build shops of legal commerce or entertainment in the Town Centre in front of the PD. No houses or bases.
+						<ul>
+							<li>This obviously does not apply to Hobo's since they just do that they want anyways.</li>
+						</ul></li>
+					<li>Make some attempt to fit your base into the map (no shitty materials on giant flying box bases).</li>
+                    <li>You may only purchase a door if you are using the interior of the building the door is attached to.</li>
+					<li>No one-way material props/materials/trickery is allowed. Both sides of a prop must be equally visible. (Including world areas)</li>
+                    <li>Using no-collided props to walk through is unrealistic and not allowed, even if it is transparent.</li>
+					<li>Do not black box, this means making all the walls in your base very dark, causing confusion to other people.</li>
+					<li>You cannot build your base in a way where your valuables are destroyed if you get raided. Eg: Forcing a printer underwater.</li>
+                    <li>Do not use constraints unless absolutely necessary. Unfrozen builds without reason will be removed.
+						<ul>
+							<li>Only constrain your build when you are ready to save. (Feel free to use Smart Constraint)</li>
+							<li>When pasting with advanced dupe, ensure that it is "Frozen and Without Constraints".</li>
+						</ul>
+                    <li>Players that are building may place a "Building" sign, disallowing people from raiding their base. Please note:
+                        <ul>
+                            <li>They must be actively building a base and have no valuables.</li>
+                            <li>Typical base rules firmly apply when the base has valuables.</li>
+                        </ul>
+                    </li>
+                    <li>Signs are to be used for RP purposes only and may only be placed on or inside the owner's property.
+						<ul>
+							<li>An RP legitimate protest may spawn signs in public. It's a protest after all!</li>
+							<li>Screens are not allowed to float above a street. You must incorporate them into a sign if you want to advertise this way.</li>
+						</ul><br>
 
-**Bold** and _Italic_ and `Code` text
+			<b>Base Defences:</b>
+					<li>Base entrances must not be excessively difficult (or long) so you can simply camp it from the outside. Admin discretion.</li>
+                    <li>KOS tunnels must be wide enough for two people in all directions and must not force the raiders to crouch or jump. (Including world areas)</li>
+					<li>KOS tunnels (and pits) are not permitted to have any holes (faded or not) in the floor where raiders can inadvertently fall off.</li>
+					<li>World doors and fading doors are the only allowed areas of your base which can fit one person at a time.</li>
+					<li>You cannot use typical fence props (that can be shot through) as a part of your base defenses.</li>
+					<li>You cannot design your base in a way where you can run out a secret door and attack raiders from behind.</li>
+                    <li>Players must not be required to break glass in order to get into your base.</li>
+				<br>
+				
+			<b>Fading Door Rules:</b>
+					<li>Only two locked doors may be used in a base. A locked door is considered a locked world door, or a fading door.
+						<ul>
+							<li>The first door is for the primary entrance, and a second door may be used to defend valuables.</li>
+							<li>You have a maximum of 1 locked door in your entrance, regardless of how your entrance is designed.</li>
+		                    <li>Doors must be built with a single prop to ensure they can be lock picked. No overlapping props are allowed at doors.</li>
+							<li>All fading doors must be lockpickable and have an attached keypad/button directly next to the door, on both sides, which is clearly visible.</li>
+                            <li>The keypad must stay open for at least 4 seconds once a successful password has been entered.</li>
+                        </ul>
+                    </li>
+					<li>You may have 2 extra doors, however these doors can only be triggered by buttons which must be placed directly on the centre or side of the door.</li>
+					<li>All elevators and timed doors are considered a locked door. While you can use them, it's strategically far better that you don't.</li>
+					<li>You are not permitted to use any hotkeys or fast methods of access to get through your front door. You must use your keypad.</li>
+					<li>Fading doors are to be used as doors, windows and box lids only. Don't make bridges, stairs, floors or ceilings that fade.</li>
+					<li>Fading props cannot be the same material as its surroundings in an attempt to hide it. This applies to all fading props.</li>
+					<li>Fading car door entrances must stay open for at least 4 seconds, no matter the method used to fade.</li>
+					<li>You must not pulse, fade, use, or open any door that is being lock picked. Note: This does not apply to windows.</li>
+					<li>You are permitted to use custom doors (such as SteamID doors) for your valuable room only. The front door must be a normal type.</li>
+				<br>
+					
+			<b>Fading Window Rules:</b>
+					<li>Fading windows must be positioned on the same level as the target area. They cannot be on a second story, for example.
+						<ul>
+							<li>Using any windows (fading or not) on the roof or floor is not permitted.</li>
+							<li>Only an open (no fading windows) ledge that overlooks the front of a base is permitted to be out of level with the target area.</li>
+						</ul>
+					<li>Fading windows must stay open for at least one second once they are used. (Hold them open manually, toggle, wire timer, etc)
+					<li>A fading window must look like a window. Eg: Glass, tinted, fence material, etc. They cannot be opaque or fully transparent.</li>
+					<li>Fading props cannot be the same material as its surroundings in an attempt to hide it. This applies to all fading props.</li>
+					<li>Advanced: A fading window prop must be of a height where person's on both sides can see waist to head, whether armed or not.
+						<ul>
+							<li>This means a minimum window height of '05' when looking at the tooltip measurements of a plate or block.</li>
+							<li><i>(You can find these props by searching for '05' in the Q menu)</i></li>
+						</ul>
+				<br>
+				
+			<b>Shop Rules:</b>
+					<li>Gun stores and other shops must be built within the following guidelines:
+						<ul>
+							<li>Wiremod automatic bases are permitted as long as you are not always AFK. You still need to roleplay.
+							<li>Stores must have a front counter area where trading with customers takes place.
+							<li>The shop owner must man the counter and also must be clearly visible to facilitate roleplay.
+							<li>Stores without a front counter are not in the best interests of RP and will be removed.</li>
+						</ul>
+                    <li>The store itself should be primarily defended from inside the base. This means unmanned kiosks are not allowed.</li><br>
+				
+			<b>Wiremod:</b>
+					<li>Using Wiremod entities for anything apart from their intended design is not tolerated.
+						<ul>
+							<li>A button is to be used as a button, a pixel is to be used as a pixel, etc.
+						</ul>
+					<li>You are not permitted to actively hide any buttons or keypads in a base which has valuables in it.
+						<ul>
+							<li>You must not use materials which blend them into the background.
+							<li>You must not use colours or transparencies which blend them into the background.
+							<li>You must not use tiny buttons/pads placed on areas which make them difficult to see.
+							<li>You must not hide buttons under furniture, behind props, in small gaps, etc.
+						</ul>
+					<li>You are not permitted to build wire based gambling machines. (To the discretion of MG staff)
+				
+				
+            </div>
+			
+			
 
-[Link](url) and ![Image](src)
-```
+            <!--<h2>Job Descriptions and Rules</h2>
+            <p>All job descriptions and rules are listed below in their respective tabs.<br>
+			Please understand how to play your job before you choose  </p>-->
+            <h3>5. Job Descriptions and Rules</h3>
+            <div class="dropdown">
+                <h3 class="red"><i>Banker</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>As a Banker, set up a shop and store items for people.</li>
+                        <li>Rent out safety deposit boxes to customers.</li>
+						<li>Hire up to 2 security guards to help defend your establishment.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>As a Banker, your Bank must be open to the public at all times. You are not allowed to AFK for over 5 minutes.</li>
+                        <li>As a Banker, you cannot steal from money printers. Understand this is a bannable offence as it is considered FailRP.</li>
+                        <li>Only the banker and his guards can defend the bank. Bystanders or customers cannot assist a banker defend his base.</li>
+                    </ul>
+                    <h4><b>Tips:</b></h4>
+                    <ul class="tips">
+                        <li>Offer gangs special deals for storing their items. They can store their items in a private vault and reduce the need for them to have a base.</li>
+						<li>Banker can be a difficult role to master in following all the base rules while in turn building an effective base.</li>
+                    </ul>
+                </div>
+   		<h3 class="red"><i>Bartender</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>As a Bartender, set up a shop at the designated building for Bartender.</li>
+                        <li>Authenticate yourself on the Slots Vault upstairs to receive profits from the Slot Machines.</li>
+			<li>Hire up to 2 security guards to help defend your establishment.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>As a Bartender, your Bar must be open to the public at all times.</li>
+                        <li>You may charge up to $100 per entry if you wish.</li>
+                    </ul>
+                    <h4><b>Tips:</b></h4>
+                    <ul class="tips">
+                        <li>Offer your customers drinks for some extra cash.</li>
+			<li>Decorate the Bar to increase its atmosphere.</li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Black Market Dealer</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>Effectively an illegal Gun Dealer.</li>
+                        <li>Can source gun shipments, armour and ammo.</li>
+                        <li>Can also source more exotic weapons such as RPG's, Sakos, Knives, etc.</li>
+                        <li>Keeping transactions on the down low is recommended.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+					<ul>
+                        <li>As a Black Market Dealer, you can't have security guards. You can however have one hired goon.</li>
+                        <li>As a Black Market Dealer, you can sell weapons secretly in a secret store. The use of roleplay tactics will help conceal you.
+                        <li>As a Black Market Dealer, publically advertising and selling guns risks strong resistance and prosecution from the Police.</li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Bloods &amp; Blood Leader</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>Organize raids against rival gangs and businesses.</li>
+                        <li>Make money off the production and sale of drugs.</li>
+                        <li>Protect your gang base.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>Gangs are not allowed to be private or friends only.
+							<ul>
+								<li>You are allowed to keep un-trusted gang members out of your valuables room though.</li>
+							</ul>
+                        <li>Gangs need at least 2 members (including the Leader) to raid.</li>
+                        <li>Gangs cannot raid without their leader; if the leader dies the raid is over.</li>
+						<li>Bloods are only permitted to have one base.</li>
+                        <li>All gang raids must begin by the leader typing <em>/ooc Raid</em> to begin and <em>/ooc Raid Over</em> when it's over.</li>
+						<li>Also refer global raiding rules found in Section 3.
+                    </ul>
+                    <h4><b>Tips:</b></h4>
+                    <ul class="tips">
+                        <li>If you have a base of valuables, leave at least one person behind to scout for sneaky raiders.</li>
+                        <li>Scout out establishments before you raid them. Wait for key opportunities such as the owners going to go get food.</li>
+                        <li>You can have a maximum of 1 Hired Goon. They cannot assist in raids, but may defend the gang base in case of a raid.</li>
+                    </ul>
+				</div>
+                <h3 class="red"><a id="ci"><i>Citizen</i></a></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>A Citizen is expected to follow the law.</li>
+                        <li>They have no specific role in city life.</li>
+                        <li>Can create a custom job. Eg: <em>/job Courier.</em></li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>A maximum of two citizens can base together.</li>
+                        <li>As a citizen, a custom job cannot imitate the roles of any current jobs.</li>
+						<li>A custom job cannot be used to circumvent laws or server rules.</li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Crips &amp; Crip Leader</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>Organize raids against rival gangs and businesses.</li>
+                        <li>Make money off the production and sale of drugs.</li>
+                        <li>Protect your gang base.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>Gangs are not allowed to be private or friends only.
+							<ul>
+								<li>You are allowed to keep un-trusted gang members out of your valuables room though.</li>
+							</ul>
+                        <li>Gangs need at least 2 members (including the Leader) to raid.</li>
+                        <li>Gangs cannot raid without their leader; if the leader dies the raid is over.</li>
+						<li>Crips are only permitted to have one base.</li>
+                        <li>All gang raids must begin by the leader typing <em>/ooc Raid</em> to begin and <em>/ooc Raid Over</em> when it's over.</li>
+						<li>Also refer global raiding rules found in Section 3.
+                    </ul>
+                    <h4><b>Tips:</b></h4>
+                    <ul class="tips">
+                        <li>If you have a base of valuables, leave at least one person behind to scout for sneaky raiders.</li>
+                        <li>Scout out establishments before you raid them. Wait for key opportunities such as the owners going to go get food.</li>
+                        <li>You can have a maximum of 1 Hired Goon. They cannot assist in raids, but may defend the gang base in case of a raid.</li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Donator Job</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>Donator Jobs are simply high-end citizens and as much their rules are alike.</li>
+						<li><a class="linkblack" href="#ci"><em>Donator Jobs must follow all Citizen rules. Click here to see them.</em></a></li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Expert Thief</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>Break into shops and houses and steal things.</li>
+                        <li>Pickpocket people for some extra cash.</li>
+                        <li>This is a solo job, however they are allowed to base and raid with one other thief.</li>
+                    </ul>
+                    <h4><b>Tips:</b></h4>
+                    <ul>
+                          <li><a class="linkblack" href="#th"><em>Click here to see Thief Rules</em></a></li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Gun Dealer</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>Supplies the city with weapons, armour and ammo.</li>
+                        <li>Must create a shop and conduct transactions there.</li>
+                        <li>Has a Gun License by default.</li>
+						<li>Consider hiring security.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>As a Gun Dealer, you must sell weapons to the public from your own store. You may not base with any other shopkeepers.</li>
+                        <li>As a Gun Dealer, you can only sell items from your store.</li>
+                        <li>As a Gun Dealer, you may have a maximum of two Security Guards.</li>
+                      </ul>
+                    <h4><b>Tips:</b></h4>
+                    <ul class="tips">
+                        <li>Consider hiring a security guard or two. Gun stores are high value targets and as such are often raided.</li>
+                        <li>It is not illegal to sell weapons to someone who doesn't carry a license. It is up to the person holding a weapon to have a license for it.</li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Gopnik</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+						<li>Gopniks vary from a typical gang as they have no leader.</li>
+                        <li>Organize raids against rival gangs and businesses.</li>
+                        <li>Make money off the production and sale of drugs.</li>
+                        <li>Protect your gang base.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>Gangs are not allowed to be private or friends only.
+							<ul>
+								<li>You are allowed to keep un-trusted gang members out of your valuables room though.</li>
+							</ul>
+                        <li>Gopniks specifically need at least 3 members to raid.</li>
+                        <li>Since Gopniks have no leader, they can raid an establishment until all their members have died once.</li>
+                        <li>Gopniks cannot war as they have no designated leader to perform declarations.</li>
+						<li>Also refer global raiding rules found in Section 3, but the above adjustments take precedence over global rules.</li>
+                    </ul>
+                    <h4><b>Tips:</b></h4>
+                    <ul class="tips">
+                        <li>If you have a base of valuables, leave at least one person behind to scout for sneaky raiders.</li>
+                        <li>Scout out establishments before you raid them. Wait for key opportunities such as the owners going to go get food.</li>
+                        <li>Gopniks can have a maximum of 2 Hired Goons. Goons cannot assist in raids, but may defend the gang base in case of a raid.</li>
+						<li>Unlike a typical gang, Gopniks are allowed to have multiple bases.</li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>High Roller</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>High Rollers are simply high-end citizens and as much their rules are alike.</li>
+						<li><a class="linkblack" href="#ci"><em>High Rollers must follow all Citizen rules. Click here to see them.</em></a></li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Highway Patrol</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>An extension of the Police.</li>
+                        <li>Highly trained in advanced driving, the Police rely on the H.W.P. for assistance on the roads.</li>
+			<li>This job has a whitelist on top of being a Donator. You need to be whitelisted by an admin.</li>
+			<li>Has access to faster cars and special items to stop vehicles in their tracks.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>Highway Patrol should be primarily patrolling the streets in a vehicle and looking for traffic violations.</li>
+			<li>Highway Patrol may act as a normal police officer, but only if they chance across something illegal.</li>
+			<li>Highway Patrol generally should not be responding to typical police calls, except ones involving cars and/or murder.</li>
+			<li>Highway Patrol must not abuse any of their special weapons or entities. Will face strong punishment.</li>
+			<li><b>Remember what you were told about in your training or face whitelist removal.</b></li>
+                        <li><a class="linkblack" href="#po"><em>Note: Police Officer rules also apply to this role. Click here to see them.</em></a></li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Hired Goon</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>Defend illegal stores and criminals bases for a fee.</li>
+                        <li>Offer other random services to Criminals.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>As a Hired Goon, you can work for criminals only.</li>
+						<li>As a Hired Goon, you cannot base with other Hired Goons.</li>
+                        <li>As a Hired Goon, you may not directly or indirectly assist with raids in any way.
+							<ul>
+								<li>You can however defend the base of your raiders while they are out doing dirty work.</li>
+                            </ul></ul>
+                </div>
+                <h3 class="red"><a id="hm"><i>Hitman</i></a></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>Kills people for money.</li>
+                        <li>People can request a hit by pressing E on the Hitman.</li>
+                        <li>Use <em>/hitprice</em> to change your price.</li>
+                        </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>As a Hitman, you can only accept hits if there is a valid reason for it. Eg: Your client may have had his gun shop fired upon by a bandit.</li>
+						<li>As a Hitman, you cannot steal any valuables from any property they break into in order to complete a hit.</li>
+                        <li>As a Hitman, you can only accept hits through the hit menu system.</li>
+                        <li>As a Hitman, you are allowed to break into your targets property to complete a hit. (You do not have to advert this.)</li>
+                        <li>Once you've completed (or failed) your hit, you must state the reason in<em>/OOC</em>. Eg: "// Hit complete. Reason: Breaking into clients' property."</li>
+                    </ul>
+                    <h4><b>Tips:</b></h4>
+                    <ul class="tips">
+                        <li>Examples of legitimate hit reasons would be 'the target raided my base', 'the target kidnapped my boss' or 'the target killed my partner'.</li>
+                        <li>Examples of illegitimate hit reasons would be 'the target is ugly' or 'the targets radio music sucks'.</li>
+                        <li>You must know the reason why you are undertaking a hit and the reason must be roleplay based.</li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Hobo</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>The lowest member of society.</li>
+                        <li>Build a shack on footpaths and such.</li>
+                        <li>Search dumpsters for items.</li>
+                        <li>Beg for food and/or money.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+						<li>As a Hobo, you are not allowed to buy or own guns.</li>
+						<li>As a Hobo, you are not allowed to order hits, etc.</li>
+						<li>As a Hobo, you are not allowed to have doors.</li>
+                        <li>As a Hobo, you are only allowed items you find legally.</li>
+                        <li>As a Hobo, if you are arrested you may pay bail.</li>
+						<li>A hobo can defend another hobo provided that hobos life is in direct danger.
+							<ul>
+								<li>The above rule is a new addition. Players abusing this rule and baiting others into mass combat will be removed from the game.</li>
+							</ul>
+                        <li>As a Hobo, by roleplay you have no money.
+						   <ul>
+                            <li>Purchasing of any goods or trading with expenditure of money is FailRP.</li>
+                           </ul>
+                    </ul>
+                    <h4><b>Tips:</b></h4>
+                    <ul class="tips">
+                        <li>Press the USE button on the various bins around the server to find food, health and weapons.</li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Jail Warden</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>An extension of the Police.</li>
+                        <li>Secure the jail cells and ensure prisoners are not escaping.</li>
+						<li>Negotiate parole for criminals that have not committed murder, or attempted murder.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>The Jail Warden must conduct his primary work in the jail.</li>
+			<li>The Jail Warden can bail anyone, provided that person has not committed murder or attempted murder.
+				<ul>
+					<li>Police can radio through and instruct you not to bail out repeat offenders, you must follow their instructions.</li>
+				</ul>
+			<li>The Jail Warden is not allowed to perform typical police duties outside of the jail.</li>
+                        <li><a class="linkblack" href="#po"><em>Note: Some police Officer rules may also apply to this role. Click here to see them.</em></a></li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Mafia &amp; Mafia Boss</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>Organize raids against rival gangs and businesses.</li>
+                        <li>Make money off the production and sale of drugs.</li>
+                        <li>Protect your gang base.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>Gangs are not allowed to be private or friends only.
+							<ul>
+								<li>You are allowed to keep un-trusted gang members out of your valuables room though.</li>
+							</ul>
+                        <li>Gangs need at least 2 members (including the Leader) to raid.</li>
+                        <li>Gangs cannot raid without their leader; if the leader dies the raid is over.</li>
+						<li>The Mafia only permitted to have one base.</li>
+                        <li>All gang raids must begin by the leader typing <em>/ooc Raid</em> to begin and <em>/ooc Raid Over</em> when it's over.</li>
+						<li>Also refer global raiding rules found in Section 3.
+                    </ul>
+                    <h4><b>Tips:</b></h4>
+                    <ul class="tips">
+                        <li>If you have a base of valuables, leave at least one person behind to scout for sneaky raiders.</li>
+                        <li>Scout out establishments before you raid them. Wait for key opportunities such as the owners going to go get food.</li>
+                        <li>You can have a maximum of 1 Hired Goon. They cannot assist in raids, but may defend the gang base in case of a raid.</li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Mayor</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>Create laws and command the Police Chief.</li>
+                        <li>Can give people Gun Licenses for a certain cost.</li>
+                        <li>In times of chaos, the Mayor can initiate a <em>/lockdown</em>.</li>
+                        <li>Secret Service protects the mayor.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>As the Mayor, before initiating a lockdown you must /broadcast the reason. Eg: <em>/broadcast Lockdown Reason: Gang violence on the street.</em></li>
+			<li>As the Mayor, you cannot ride in vehicles at all.</li>
+                        <li>As the Mayor, keep the laws realistic and roleplay focused.</li>
+                        <li>As the Mayor, the laws you place must not breach default laws or server rules. Eg: Arresting anyone with the name 'Johnny' on sight.</li>
+                        <li>As the Mayor, you cannot act as a Police Officer or Crusader. You may only unarrest people.</li>
+                        <li>As the Mayor, you cannot participate in raids or defend the PD unless your life is immediately threatened.</li>
+                        <li>As the Mayor, you cannot make a law prohibiting jaywalking.</li>
+						<li>As you are a Government job, you may only 'base' in the PD. Government jobs cannot have private bases.
+							<ul>
+								<li>An 'outpost' (eg: rooftop pillbox) is not included as a base, but only S.W.A.T. can base within any 'outpost'.</li>
+							</ul>
+                    </ul>
+                    <h4><b>Tips:</b></h4>
+                    <ul class="tips">
+                        <li>Use <em>/addlaw</em> to make new laws.</li>
+                        <li>Use <em>/placelaws</em> to make a lawboard.</li>
+                        <li>Use <em>/removelaw #</em> to remove a law. (# being the law number you wish to remove)</li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Merchant</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>Set up a shop and sell various items.</li>
+                        <li>Can sell food, armour, alcohol, health, pistol ammo and more.</li>
+                        <li>Can purchase a Gun Lab to supply customers with a weapon.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>As a Merchant, you can only sell items from your store.</li>
+                        <li>As a Merchant, you must sell items to the public from your own store. You may not base with other shopkeepers.</li>
+                    </ul>
+                    <h4><b>Tips:</b></h4>
+                    <ul class="tips">
+                      <li>Have up to 2 Security Guards to protect your store from raiders.</li>
+                   </ul>
+                </div>
+                <h3 class="red"><i>Meth Cook</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>Set up a meth lab.</li>
+                        <li>Cook drugs and sell them for cash.</li>
+						<li>The return rate on this job depends on your speed and skills.</li>
+                    </ul>
+                    <h4><b>Tips:</b></h4>
+                    <ul class="tips">
+                        <li>Press the Use Key (E) on Meth once cooked and take to a Meth Addicted NPC and press Use Key on them to exchange Meth for Money</li>
+                        <li>Consider recruiting a Hired Goon to protect your lab from thieves, gangs and cops.</li>
+                        <li>You may base with a maximum of 1 Meth Cook or 1 Hired Goon.</li>
+						<li>You are not allowed to base with anyone else except the above combinations.</li>
+						<li>Any visible meth equipment can be treated as such without needing to have direct line of sight proof.</li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Ninja</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>Climb walls to reach targets. Use Grapple hook to get to tricky places.</li>
+                        <li>Comes with lockpick and keypad cracker to be used only to reach the target.</li>
+                        <li>Can only kill with provided shurikens, neck snap or any other melee weapon.</li>
+                        <li>Not allowed to steal from anyone. Must work alone.</li>
+                        <li>People can request a hit by pressing E on the Ninja.</li>
+                        <li>Use <em>/hitprice</em> to set hit price.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>As a Ninja, do not Grapple Hook someone else unless they are your hit.</li>
+                        <li>As a Ninja, you can only kill people with shurikens, neck snap or a melee weapon.</li>
+                        <li><a class="linkblack" href="#hm"><em>Click here to see Hitman Rules</em></a></li>
+                    </ul>
+                </div>
+                <h3 class="red"><a id="po"><i>Police Officer</i></a></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+						<li>This job is not recommended for brand new players.</li>
+						<li>Patrol the streets and enforce the laws provided by the Mayor.</li>
+                        <li>Protect citizens from criminals and danger.</li>
+						<li>Respond to police requests in the <em>/cr</em> channel.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+						<li>As a Police Officer, you should always act in a manner that real life police do. Use reason, do not do something you wouldn't see in real life.</li>
+                        <li>As a Police Officer, you may only shoot a criminal under the conditions that an RP life is directly in danger.
+							<ul>
+								<li><b>In all other situations you are required to use other methods such as talking, cuffing, searching and arresting.</b></li>
+							</ul>
+                        <li>As a Police Officer, do not act purely on word of mouth. Treat reports as just reports until you see otherwise with your own eyes.</li>
+						<li>As a Police Officer, do not random weapon check. You must have valid reason to search someone. Eg: If they wish to enter the PD or visit the Mayor.</li>
+                        <li>As a Police Officer, do not stunstick spam or taser abuse, use these weapons for Law Enforcement purposes only.</li>
+                        <li>As a Police Officer, do not random arrest/warrant/want; you must have a valid reason for these actions. Eg: Murder or Kidnap</li>
+                        <li>As a Police Officer, offering bail is encouraged but not required. Bail cannot exceed $1000.
+							<ul>
+								<li>Once a criminal has been arrested, only the arresting officer or the Mayor can offer bail.</li>
+							</ul>
+                        <li>As a Police Officer, you may only raid a bank to arrest a wanted/warranted individual, or to obtain illegal goods such as weapons or drugs.
+							<ul>
+								<li>Money printers can be legally stored in banks, so these cannot be touched.</li>
+							</ul>
+                        <li>As a Police Officer, you may be corrupt. Eg: Occasionally letting someone pay for you to look the other way.
+							<ul>
+								<li>You can be arrested (and job demoted) if you are caught being corrupt by your colleagues.</li>
+							</ul>
+						<li>As you are a Government job, you may only 'base' in the PD. Government jobs cannot have private bases.
+							<ul>
+								<li>An 'outpost' (eg: rooftop pillbox) is not included as a base, but only S.W.A.T. can base within any 'outpost'.</li>
+							</ul>
+			<li>You may only impound vehicles for the following reasons:
+				<ul>
+					<li>Not pulling over for police.</li>
+					<li>Ramming cars.</li>
+					<li>Not properly parked as per car rules.</li>
+					<li>Vehicles used in weapons crime or murder.</li>
+				</ul></li>
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+                    </ul>
+                    <h4><b>Tips:</b></h4>
+                    <ul class="tips">
+                        <li>Any person with a weapon out on the street should be arrested on sight, regardless of licensing. There is no reason to have a gun out on the street.</li>
+                        <li>Police Officers should only unholster their weapons in life-threatening circumstances. Non life-threatening situations should be approached with the taser.</li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Police Chief</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>The Chief is the leader of the Police and SWAT.</li>
+                        <li>Coordinate the police forces to bring law to the city.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>As the Police Chief, you cannot sell your job specific items to the general public, or to police at high profit.</li>
+                        <li><a class="linkblack" href="#po"><em>Note: Police Officer rules also apply to this role. Click here to see them.</em></a></li>
 
-### Jekyll Themes
+                    </ul>
+                </div>
+                <h3 class="red"><i>Radio Host</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>Purchase a Microphone and play music to people.</li>
+                        <li>Set up a studio, and consider hiring security.</li>
+                        <li>Avoid playing music through your desktop microphone.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>As a Radio Host, you cannot run through town with your radio playing, you must remain in one spot and if someone wants to listen they will buy a radio.</li>
+                        <li>As a Radio Host, try not to force people to listen to your radio.
+							<ul>
+								<li>Set up in a place that is optional for others to visit (not standing on the main street).</li>
+								<li>Do not walk around while transmitting.</li>
+							</ul>
+                    </ul>
+                    <h4><b>Tips:</b></h4>
+                    <ul class="tips">
+                        <li>Use Virtual Audio Cable for better quality.</li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Road Hoon</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>Road Hoons think they own the streets.</li>
+                        <li>Cause headaches for the highway patrol. (No ramming)</li>
+			<li>Break as many road rules as you can without going to prison. (No ramming)</li>
+			<li>Aid in the escape of other criminals. (Getaway driving)</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul class="tips">
+                        <li>Road Hoons spend most of their time in a car, and less in a base.</li>
+			<li>Road Hoons can be fined up to $1,000 for serial offending.</li>
+                        <li>Road Hoons can all base together, however cannot base with any other job.</li>
+                        <li>Road Hoons can act as getaway drivers for any raider (or crime), but they must not particitape in the actual raid (or crime).</li>
+			<li>Road Hoons can get in between car pursuits of other cars and help the car get away. (No ramming)</li>
+			<li>Spirit of Rule: As you can see, you have a lot of freedom here, provided you are doing it in cars.
+				<ul>
+					<li>(Note: You can also be arrested for assisting in crime just as easily. Play this job very openly.)</li>
+				</ul></li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Secret Service</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>Must protect the mayor and act as a body guard.</li>
+                        <li>Follow orders that the Mayor gives.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>A Secret Service officer is primarily designated to defend the mayor. You may carry out normal police work if the Mayor permits, or there is no Mayor elected.</li>
+                        <li><a class="linkblack" href="#po"><em>Note: Police Officer rules also apply to this role. Click here to see them.</em></a></li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Security Guard</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>Gain employment from businesses.</li>
+                        <li>Protect their property against any break-ins.</li>
+                        <li>Can search people for weapons if necessary.</li>
+                        <li>Can work for Gun Dealer, Merchant, Banker or Radio Host.</li>
+                        <li>Has a gun license by default.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>A maximum of 2 security guards are allowed per establishment.</li>
+                        <li>As a Security Guard, you can only work for a legal shopkeeper i.e. not a Black Market Dealer.</li>
+                        <li>As a Security Guard, you have the right to search anyone on your private property.</li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>S.W.A.T</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>An extension of the Police.</li>
+                        <li>Highly trained in heavy combat, the Police rely on the S.W.A.T for assistance in raids.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>S.W.A.T members should be primarily organising police raids on illegal establishments, however may act as a normal police officer in their spare time.</li>
+                        <li><a class="linkblack" href="#po"><em>Note: Police Officer rules also apply to this role. Click here to see them.</em></a></li>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Terrorist</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>As the terrorist, your objective is to conduct terrorist attacks through the use of a jihad bomb.</li>
+                        <li>Find a safe location, purchase a bomb generator and bomb fuel and construct a jihad bomb.</li>
+                        <li>It takes 15 minutes for the bomb to generate.</li>
+                        <li>You will be rewarded cash for each victim of the jihad attack, and more if they are mayor or police.</li>
+                        <li>Remain isolated and be sneaky, as you are considered suspicious.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>As the Terrorist, you are to only blow people up with your jihad bomb.</li>
+                        <li>As the Terrorist, you are not allowed to kidnap or raid.</li>
+                    </ul>
+                </div>
+                <h3 class="red"><a id="th"><i>Thief</i></a></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>Break into shops and houses and steal things.</li>
+                        <li>Pickpocket people for some extra cash.</li>
+                        <li>This is a solo job, however they are allowed to base and raid with one other thief.</li>
+                        <li>If raiding with another thief, you must <em>/ooc Raid with 'FriendsName' </em> or your partner must <em>/ooc Raid Assist</em></li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>As a Thief, you must <em>/ooc Raid</em> to begin, and <em>/ooc Raid Over</em> when complete.</li>
+                        <li>As a Thief, you must wait 10 seconds after advertising to commence your raid.</li>
+                        <li>As a Thief, you may live and work with one other thief.
+							<ul>
+								<li>If raiding together, you must <em>/ooc Raid</em> with your partners name in the message and <em>/ooc Raid Over</em> when complete.</li>
+							</ul>
+                    </ul>
+                </div>
+                <h3 class="red"><i>Town Creep</i></h3>
+                <div class="dropdown">
+                    <h4><b>Description:</b></h4>
+                    <ul>
+                        <li>You creep people out.</li>
+                        <li>People consider you a stalker.</li>
+                        <li>Get paid to stalk targets in order to gain information, such as where a gang base is.</li>
+                    </ul>
+                    <h4><b>Rules:</b></h4>
+                    <ul>
+                        <li>As the Town Creep, you must charge a minimum of $100 to stalk someone.</li>
+                        <li>As the Town Creep, you must not kill your target unless it is self defense.</li>
+			<li>As the Town Creep, you are allowed to base with anyone, provided you do not participate in any combat.</li>
+                    </ul>
+                   <h4><b>Tips:</b></h4>
+                    <ul class="tips">
+                        <li>Eg: Get Hired to stalk a base entrance alert your client when they are not home.</li>
+                    </ul>
+                </div>
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/OriginalGamingAU/github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+				
+            </div>
+            </div>
+		
+        </div>
+		
+    </div>
+	
+	
+    <div class="footer">
+        
+		<h5><a href="http://monumentalgaming.net/" style="color: #ffffff">MonumentalGaming.net</a> | <a href="http://monumentalgaming.net/donate/" style="color: #ffffff">Donate</a></h5>
+    </div>
+    <script type="text/javascript">
+        //<![CDATA[
+        $("h3").click(function() {
 
-### Support or Contact
+            var isVisible = $(this).next().is(":visible");
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+            $(this).next().slideToggle();
+
+            var expandArrow = $(this).children(".icons8-Expand-Arrow");
+            var collapseArrow = $(this).children(".icons8-Collapse-Arrow");
+
+            if (!isVisible) {
+
+                expandArrow.fadeOut(200, function() {
+                    collapseArrow.fadeIn(200);
+                });
+
+
+            } else {
+
+                collapseArrow.fadeOut(200, function() {
+                    expandArrow.fadeIn(200);
+                });
+            }
+
+        });
+
+        $("#expandall").click(function() {
+            var areAllOpen = true;
+
+            $(".dropdown").each(function(index) {
+                if ($(this).is(":visible")) {
+                    areAllOpen = false;
+                }
+            });
+
+            if (areAllOpen) {
+                $(".dropdown").slideDown();
+            } else {
+                $(".dropdown").slideUp();
+            }
+
+        });
+
+        $("h3").append('<img class="icon icons8-Expand-Arrow" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAqklEQVRIie2UQRHDIBQFIwEJlYCESIgEJMRBJERCJVQCEpBQCUjYXmD6pqUFJhzZI5PsZj6EZZlMhgE4wAzwGMCV5AARsBfkFngm1/ZZDVciSR6TIwC30kOeN9u35qd8Fbn/O2rgLhHXIN9FfjbtI3BI5KjIM2dV3PNy+trM3iUXySoSn9aMjDG2jLEWsRIJwEPkzQehJRIlNE4ukfyvlM/4wMjl62Qy6eMFZgsz/LK8UWwAAAAASUVORK5CYII=" width="24" height="24">');
+        $("h3").append('<img class="icon icons8-Collapse-Arrow" style="display: none;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAoklEQVRIie2SUQ2EMAxAJwEJSJgEJCABCXMwCUg4CUhAwiQgAQmPn/WuWXKXZjf42kv2szavTVvnOp1HAYZb5cAGpOaFAA8cfDgBf4c85demCDBlEcAuo8mjEqZaeVDytZx7/hOWGrmw/siLKi9a5bqz0KoZOcOXWuBi6si9dyXs3+Sbks9WuXJ4VSSVwfkfeVFEDiOUwQiMtXLlGSy763TsXLpPLbHeHnSKAAAAAElFTkSuQmCC" width="24" height="24">');
+        //]]>
+    </script>
+</body>
+
+</html>
